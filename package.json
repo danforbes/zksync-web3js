@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "web3": "^4.11.1",
+    "web3": "4.10.1-dev.1436228.0",
     "web3-plugin-zksync": "^1.0.0-alpha.0"
   }
 }
