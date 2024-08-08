@@ -4,8 +4,8 @@ import { ZkSyncPlugin } from "web3-plugin-zksync";
 async function main() {
   const web3: Web3 = new Web3("http://localhost:3050/");
   console.log("L1 block number:", await web3.eth.getBlockNumber());
-  web3.registerPlugin(new ZkSyncPlugin("http://localhost:3051/"));
 
+  web3.registerPlugin(new ZkSyncPlugin("http://localhost:3051/"));
   const zksync: ZkSyncPlugin = web3.zkSync;
   console.log("L2 contract addresses:", await zksync.ContractsAddresses);
 }
