@@ -40,6 +40,12 @@ async function main() {
     "Receiver Change In L2 Balance:",
     receiverL2BeginningBalance - (await zksync.L2.getBalance(receiver)),
   );
+
+  // Transaction Hash: 0xca75d5c4023f2a0f7602ddf432bd259240a0b1672158237754227ce755a24bbf
+  // Sender Change In L1 Balance: 2179520912679450n
+  // Sender Change In L2 Balance: 0n
+  // Receiver Change In L2 Balance: 0n
+  // ✅ Script executed successfully
 }
 
 main()
