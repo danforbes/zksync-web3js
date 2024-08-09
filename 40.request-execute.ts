@@ -1,6 +1,5 @@
 import { TransactionReceipt, utils, Web3 } from "web3";
-import { ZkSyncPlugin, ZKSyncWallet } from "web3-plugin-zksync";
-import { PriorityOpResponse } from "web3-plugin-zksync/lib/types";
+import { types, ZkSyncPlugin, ZKSyncWallet } from "web3-plugin-zksync";
 
 async function main() {
   const web3: Web3 = new Web3("http://localhost:8545/");
@@ -13,7 +12,7 @@ async function main() {
   const l1BeginningBalance: bigint = await wallet.getBalanceL1();
   const l2BeginningBalance: bigint = await wallet.getBalance();
 
-  const tx: PriorityOpResponse = await wallet.requestExecute({
+  const tx: types.PriorityOpResponse = await wallet.requestExecute({
     contractAddress: await zksync.L2.getBridgehubContractAddress(),
     calldata: "0x",
     l2Value: utils.toWei("0.00020", "ether"),
