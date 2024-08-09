@@ -21,7 +21,7 @@ async function main() {
   const tx: PriorityOpResponse = await wallet.deposit({
     token: ETH_ADDRESS,
     to: receiver,
-    amount: utils.toNumber(utils.toWei("0.00020", "ether")),
+    amount: utils.toWei("0.00020", "ether"),
     refundRecipient: wallet.getAddress(),
   });
 

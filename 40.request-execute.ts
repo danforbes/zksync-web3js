@@ -16,7 +16,7 @@ async function main() {
   const tx: PriorityOpResponse = await wallet.requestExecute({
     contractAddress: await zksync.L2.getBridgehubContractAddress(),
     calldata: "0x",
-    l2Value: utils.toNumber(utils.toWei("0.00020", "ether")),
+    l2Value: utils.toWei("0.00020", "ether"),
     l2GasLimit: 900_000,
   });
 
